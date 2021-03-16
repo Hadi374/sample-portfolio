@@ -606,8 +606,9 @@ img {
     transition: 0.3s;
 }
 
-#contact .form textarea {
-    grid-area: 1 / 2 / span 2 / span 1;
+#contact .form .textarea {
+    grid-row-end: span 2;
+    height: auto;
     
 }
 
@@ -626,11 +627,20 @@ footer {
     
 }
 
-footer .container .container {
+footer .grid-items {
+    display: grid;
+
+    grid-gap: 16px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(6, 20%);
+}
+
+footer .grid-items .container {
     padding: 16px;
-    margin: 16px;
     color: #87df49;
-    border:1px solid #28242f;
+    border: 1px solid #28242f;
 }
 
 footer p {
@@ -761,6 +771,12 @@ footer p {
         padding: 1rem;
     }
 
+
+    #portfolio-items .items {
+        grid-template-columns: auto;
+        grid-gap: 16px;
+    }
+
     .tabbed {
         margin-left: 16px;
     }
@@ -777,8 +793,8 @@ footer p {
         margin: 100px 32px 0px 32px;
     }
 
-    #contact .form textarea {
-        grid-area: 2 / 1 /span 2 / span 1;
+    footer .grid-items {
+        width: 96%;
     }
 
 }
